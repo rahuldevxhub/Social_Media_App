@@ -1,0 +1,24 @@
+ const renderContent = () => {
+        switch(viewStory.media_type){
+            case "image":
+                return(
+                    <img src={viewStory.media_url} alt="" className="max-w-full max-h-screen object-contain" />
+                );
+          switch(viewStory.media_type){
+            case "video":
+                return(
+                    <video onEnded={() => setViewStory(null)} src={viewStory.media_url}  className=" max-h-screen object-contain" />
+                );
+                switch(viewStory.media_type){
+            case "text":
+                return(
+                   <div className="w-full h-full flex items-center justify-center p-8 text-white text-2xl text-center">
+                    {
+                        viewStory.content
+                    }
+                   </div>
+                );
+
+            default:
+                return null
+        }

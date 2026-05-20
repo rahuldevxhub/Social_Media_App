@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "this is the social media app build by rahul",
+  "license": "ISC",
+  "author": "rahul kumar rajak",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "inngest": "^4.4.0",
+    "mongoose": "^9.6.2",
+    "multer": "^2.1.1",
+    "nodemon": "^3.1.14"
+  }
+}
