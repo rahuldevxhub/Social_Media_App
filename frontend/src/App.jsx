@@ -9,14 +9,25 @@ import Profile from "./Pages/Profile";
 import CreatePost from "./Pages/CreatePost";
 import Layout from "./Pages/Layout";
 
-import { useUser } from "@clerk/clerk-react";
+import { useUser,useAuth } from "@clerk/clerk-react";
 import {Toaster} from 'react-hot-toast'
+import { useEffect } from "react";
 
 
 const App = () => {
+
+  const {getToken} = useAuth()
   const {user} = useUser();
+
+  useEffect(() => {
+    if(user){
+      getToken().then((token)=>console.log(token))
+    }
+
+  },[user])
   return (
     <>
+  
     <Toaster/>
       <Routes>
         
@@ -33,6 +44,7 @@ const App = () => {
         </Route>
         
       </Routes>
+
     </>
   );
 };
